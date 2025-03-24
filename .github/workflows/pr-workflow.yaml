@@ -1,0 +1,53 @@
+name: pr-workflow
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, edited]
+
+concurrency:
+  group: "sonar_qube_gh_action-${{ github.head_ref }}"
+  cancel-in-progress: false
+
+env:
+  PYTHON_VERSION: "3.11"
+
+jobs:
+  pr-workflow:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install UV
+        shell: bash
+        run: |
+          curl -LsSf https://astral.sh/uv/install.sh | sh
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Set up virtual env and install package
+        run: |
+          uv venv
+          source .venv/bin/activate
+          uv pip install .
+      - name: "Check that the lockfile is up-to-date"
+        run: uv lock --locked
+
+      - name: Linting check
+        run: uvx ruff check .
+
+      - name: Formatting check
+        run: uvx ruff format --check .
+
+      - name: Type consistency
+        run: uv run pyright .
+
+      - name: Unit tests
+        run: uv run pytest
+
+      - name: SonarQube Cloud scan
+        uses: SonarSource/sonarqube-scan-action@v5.0.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+
+      - name: Build
+        run: uv build

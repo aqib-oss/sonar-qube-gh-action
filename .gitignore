@@ -2,6 +2,7 @@
 __pycache__/
 *.py[cod]
 *$py.class
+*.py[oc]
 
 # C extensions
 *.so
@@ -50,6 +51,8 @@ coverage.xml
 .hypothesis/
 .pytest_cache/
 cover/
+coverage-reports/
+coverage-reports\\coverage.xml
 
 # Translations
 *.mo
@@ -172,3 +175,12 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+# Visual Studio Code (VSCode)
+.vscode/
+
+# MacOS metadata files
+.DS_Store
+
+# Outputs
+outputs/
