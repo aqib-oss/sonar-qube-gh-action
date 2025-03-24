@@ -1,6 +1,6 @@
 [project]
 name = "sonar-qube-gh-action"
-version = "0.0.0"
+version = "0.1.0"
 description = "Demo of SonarQube GitHub Action"
 authors = [{ name = "Aqib Niaz Bhat" }]
 readme = "README.md"
