@@ -23,7 +23,7 @@ env:
   SEMVER_PAT: ${{ secrets.SEMVER_GH_TOKEN }}
 
 jobs:
-  setup:
+  main-workflow:
     runs-on: ubuntu-latest
     steps:
       - name: Install UV
@@ -40,10 +40,6 @@ jobs:
           source .venv/bin/activate
           uv pip install .
 
-  main-workflow:
-    needs: [setup]
-    runs-on: ubuntu-latest
-    steps:
       - name: Unit tests
         run: uv run pytest
 

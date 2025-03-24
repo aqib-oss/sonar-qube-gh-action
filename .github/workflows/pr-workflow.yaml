@@ -12,7 +12,7 @@ env:
   PYTHON_VERSION: "3.11"
 
 jobs:
-  setup:
+  pr-workflow:
     runs-on: ubuntu-latest
     steps:
       - name: Install UV
@@ -31,10 +31,6 @@ jobs:
       - name: "Check that the lockfile is up-to-date"
         run: uv lock --locked
 
-  pr-workflow:
-    needs: [setup]
-    runs-on: ubuntu-latest
-    steps:
       - name: Linting check
         run: uvx ruff check .
 
