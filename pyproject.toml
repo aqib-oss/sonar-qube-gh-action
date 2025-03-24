@@ -21,7 +21,7 @@ dev = [
 
 [tool.semantic_release]
 version_variables = ["pyproject.toml:version"]
-build_command = "uv build"
+build_command = "curl -LsSf https://astral.sh/uv/install.sh | sh && uv build"
 
 [tool.semantic_release.remote.token]
 env = "SEMVER_GH_TOKEN"
