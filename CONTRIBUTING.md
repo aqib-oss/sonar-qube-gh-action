@@ -13,8 +13,9 @@
 
 - Install **uv**: `curl -LsSf https://astral.sh/uv/install.sh | sh`
 - [Optional] Install **Ruff** globally: `uv tool install ruff@latest`
-- Create a virtual environment: `uv venv`
-  - Activate: `source .venv/bin/activate`
+- Vitual environment:
+  - Create a named virtual environment: `uv venv sonar_qube_gh_action`
+  - Activate: `source sonar_qube_gh_action/bin/activate`
 - Install the package: `uv pip install .`
 
 ## Making a change
