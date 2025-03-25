@@ -1,6 +1,20 @@
 # CHANGELOG
 
 
+## v0.1.1 (2025-03-25)
+
+### Bug Fixes
+
+- Use named env ([#5](https://github.com/aqib-oss/sonar-qube-gh-action/pull/5),
+  [`d46eedb`](https://github.com/aqib-oss/sonar-qube-gh-action/commit/d46eedb633235f1b6185371a718220cfa5de1411))
+
+* fix: Use named env
+
+* Correct sourcing
+
+* Update uv lock file
+
+
 ## v0.1.0 (2025-03-24)
 
 ### Bug Fixes
