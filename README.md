@@ -11,3 +11,15 @@ Also, uses:
   - Ruff documentation: <https://docs.astral.sh/ruff/>
 - **Python Semantic Release** for automatic Semantic Versioning of this Python project.
   - Documentation: <https://python-semantic-release.readthedocs.io/en/latest/index.html>
+
+## Links and stats
+
+- This project on SonarQube Cloud: <https://sonarcloud.io/project/overview?id=aqib-oss_sonar-qube-gh-action>
+- [How to contribute - setup, PR, etc.](CONTRIBUTING.md)
+
+| Source                        | Status                                                                                                                                                                                                        |
+| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| GitHub Actions main workflow  | [![main-workflow](https://github.com/aqib-oss/sonar-qube-gh-action/actions/workflows/main-workflow.yaml/badge.svg)](https://github.com/aqib-oss/sonar-qube-gh-action/actions/workflows/main-workflow.yaml)    |
+| GitHub Action PR workflow     | [![pr-workflow](https://github.com/aqib-oss/sonar-qube-gh-action/actions/workflows/pr-workflow.yaml/badge.svg)](https://github.com/aqib-oss/sonar-qube-gh-action/actions/workflows/pr-workflow.yaml)          |
+| SonarQube Quality Gate status | [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=aqib-oss_sonar-qube-gh-action&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=aqib-oss_sonar-qube-gh-action) |
+| SonarQube Code Coverage       | [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=aqib-oss_sonar-qube-gh-action&metric=coverage)](https://sonarcloud.io/summary/new_code?id=aqib-oss_sonar-qube-gh-action)                |
