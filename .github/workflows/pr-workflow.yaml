@@ -26,7 +26,7 @@ jobs:
       - name: Set up virtual env and install package
         run: |
           uv venv sonar_qube_gh_action
-          source .venv/bin/activate
+          source sonar_qube_gh_action/bin/activate
           uv pip install .
       - name: "Check that the lockfile is up-to-date"
         run: uv lock --locked
