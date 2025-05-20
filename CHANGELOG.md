@@ -2,6 +2,28 @@
 
 <!-- version list -->
 
+## v0.1.2 (2025-05-20)
+
+### Chores
+
+- Minor updates to docs and config
+  ([`46e4fd5`](https://github.com/aqib-oss/sonar-qube-gh-action/commit/46e4fd5d99dc6ddb8d0e52d2f5e9c47d4f7e984f))
+
+### Continuous Integration
+
+- Remove deprecated reviewers config ([#7](https://github.com/aqib-oss/sonar-qube-gh-action/pull/7),
+  [`2de6400`](https://github.com/aqib-oss/sonar-qube-gh-action/commit/2de6400934b59a6fa3a1c5f907954edd792e739c))
+
+### Documentation
+
+- Update README ([#6](https://github.com/aqib-oss/sonar-qube-gh-action/pull/6),
+  [`0effa15`](https://github.com/aqib-oss/sonar-qube-gh-action/commit/0effa15155ef02746dc523762f60f4e156955a70))
+
+* docs: Update README
+
+* Update uv lock file
+
+
 ## v0.1.1 (2025-03-25)
 
 ### Bug Fixes
