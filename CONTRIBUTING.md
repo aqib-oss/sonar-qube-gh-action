@@ -16,7 +16,8 @@
 - Vitual environment:
   - Create a named virtual environment: `uv venv sonar_qube_gh_action`
   - Activate: `source sonar_qube_gh_action/bin/activate`
-- Install the package: `uv pip install .`
+- Install the package with the main dependencies: `uv pip install .`
+- To install the dev dependencies: `uv pip install --group dev`
 
 ## Making a change
 

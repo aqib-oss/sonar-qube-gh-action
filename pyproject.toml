@@ -20,8 +20,33 @@ dev = [
 ]
 
 [tool.semantic_release]
+commit_parser = "conventional"
+commit_parser_options = { default_bump_level = 2 }
+major_on_zero = true
 version_variables = ["pyproject.toml:version"]
 build_command = "curl -LsSf https://astral.sh/uv/install.sh | sh && source $HOME/.local/bin/env && uv build"
+
+[tool.semantic_release.changelog]
+default_templates = { changelog_file = "CHANGELOG.md" }
+exclude_commit_patterns = [
+    '''ci(?:\([^)]*?\))?: .+''',
+    '''style(?:\([^)]*?\))?: .+''',
+    '''test(?:\([^)]*?\))?: .+''',
+    '''build\((?!deps\): .+)''',
+    '''Merged? .*''',
+    '''Initial Commit.*''',
+    # Old semantic-release version commits
+    '''^\d+\.\d+\.\d+''',
+]
+mode = "update"
+
+[tool.semantic_release.branches.main]
+match = "(main|master)"
+prerelease = false
+prerelease_token = "rc"
+
+[tool.semantic_release.publish]
+upload_to_vcs_release = true
 
 [tool.semantic_release.remote.token]
 env = "SEMVER_GH_TOKEN"
@@ -32,7 +57,6 @@ build-backend = "hatchling.build"
 
 [tool.distutils.bdist_wheel]
 universal = true
-
 
 [project.urls]
 Repository = "https://github.com/aqib-oss/sonar-qube-gh-action"
