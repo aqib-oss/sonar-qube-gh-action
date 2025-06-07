@@ -22,6 +22,11 @@
 ## Making a change
 
 - Create a branch for your changes e.g. `git checkout -b fix/npe-get-salary`
+- To check if the `uv` lockfile is up-to-date, run: `uv lock --check`
+- To update the `uv` lockfile, run: `uv lock`
+- To upgrade all packages, run: `uv lock --upgrade`
+- To only upgrade a single package, run: `uv lock --upgrade-package <package>`
+- To upgrade a single package to a specific version, run: `uv lock --upgrade-package <package>==<version>`
 
 ### Code quality
 
