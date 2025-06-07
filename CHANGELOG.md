@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v1.0.0 (2025-06-07)
+
+### Features
+
+- Upgrade python semantic release ([#8](https://github.com/aqib-oss/sonar-qube-gh-action/pull/8),
+  [`8bf500a`](https://github.com/aqib-oss/sonar-qube-gh-action/commit/8bf500ae69fc9f20e3c829a4dc12017e620c6021))
+
+
 ## v0.1.2 (2025-05-20)
 
 ### Chores
