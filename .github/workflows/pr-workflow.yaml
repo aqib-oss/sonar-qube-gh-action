@@ -15,6 +15,11 @@ jobs:
   pr-workflow:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
       - name: Install UV
         uses: astral-sh/setup-uv@v5
         with:
@@ -25,11 +30,6 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version-file: "pyproject.toml"
-
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
 
       - name: Install the project
         run: uv sync --locked --all-extras --dev
