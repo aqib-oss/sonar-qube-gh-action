@@ -191,12 +191,10 @@ def test_square_root_negative_number():
     calculator: Calculator = Calculator()
 
     # Act & Assert
-    try:
+    with pytest.raises(
+        ValueError, match="Cannot compute square root of negative number"
+    ):
         calculator.square_root(-16)
-    except ValueError as e:
-        assert str(e) == "Cannot compute square root of negative number"
-    else:
-        assert False, "Expected ValueError not raised"
 
 
 def test_absolute():
@@ -237,12 +235,8 @@ def test_factorial_negative():
     calculator: Calculator = Calculator()
 
     # Act & Assert
-    try:
+    with pytest.raises(ValueError, match="Cannot compute factorial of negative number"):
         calculator.factorial(-5)
-    except ValueError as e:
-        assert str(e) == "Cannot compute factorial of negative number"
-    else:
-        assert False, "Expected ValueError not raised"
 
 
 def test_factorial_one():
