@@ -1,3 +1,5 @@
+import pytest
+
 from sonar_qube_gh_action.calculator import Calculator
 
 
@@ -173,12 +175,8 @@ def test_modulus_zero_divisor():
     calculator: Calculator = Calculator()
 
     # Act & Assert
-    try:
+    with pytest.raises(ValueError, match="Cannot perform modulus by zero"):
         calculator.modulus(10, 0)
-    except ValueError as e:
-        assert str(e) == "Cannot perform modulus by zero"
-    else:
-        assert False, "Expected ValueError not raised"
 
 
 def test_square_root():
