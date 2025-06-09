@@ -22,7 +22,7 @@ RUN adduser -u 5678 --disabled-password --gecos "" appuser && chown -R appuser /
 USER appuser
 
 # Copy the project into the image
-ADD . /app
+COPY . /app
 
 # Install the project dependencies
 RUN uv sync --locked --no-dev
