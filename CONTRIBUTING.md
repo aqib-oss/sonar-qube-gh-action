@@ -14,7 +14,7 @@
 - Install **uv**: `curl -LsSf https://astral.sh/uv/install.sh | sh`
   - Upgrade `uv`: `uv self update`
 - [Optional] Install **Ruff** globally: `uv tool install ruff@latest`
-- Vitual environment:
+- Virtual environment:
   - Create a named virtual environment: `uv venv sonar_qube_gh_action`
   - Activate: `source sonar_qube_gh_action/bin/activate`
 - Install the project: `uv sync --locked --all-extras --dev`
