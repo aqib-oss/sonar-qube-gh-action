@@ -16,20 +16,23 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Install UV
-        shell: bash
-        run: |
-          curl -LsSf https://astral.sh/uv/install.sh | sh
+        uses: astral-sh/setup-uv@v5
+        with:
+          # Install a specific version of uv.
+          version: "0.7.12"
+
+      - name: "Set up Python"
+        uses: actions/setup-python@v5
+        with:
+          python-version-file: "pyproject.toml"
+
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - name: Set up virtual env and install package
-        run: |
-          uv venv sonar_qube_gh_action
-          source sonar_qube_gh_action/bin/activate
-          uv pip install .
-      - name: "Check that the lockfile is up-to-date"
-        run: uv lock --locked
+
+      - name: Install the project
+        run: uv sync --locked --all-extras --dev
 
       - name: Linting check
         run: uvx ruff check .
@@ -48,6 +51,3 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.SEMVER_GH_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-
-      - name: Build
-        run: uv build

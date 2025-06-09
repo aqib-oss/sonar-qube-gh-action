@@ -177,7 +177,9 @@ cython_debug/
 .pypirc
 
 # Visual Studio Code (VSCode)
-.vscode/
+.vscode/*
+!.vscode/launch.json
+!.vscode/tasks.json
 
 # MacOS metadata files
 .DS_Store

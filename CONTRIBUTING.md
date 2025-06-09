@@ -12,12 +12,14 @@
 ## Setup
 
 - Install **uv**: `curl -LsSf https://astral.sh/uv/install.sh | sh`
+  - Upgrade `uv`: `uv self update`
 - [Optional] Install **Ruff** globally: `uv tool install ruff@latest`
 - Vitual environment:
   - Create a named virtual environment: `uv venv sonar_qube_gh_action`
   - Activate: `source sonar_qube_gh_action/bin/activate`
-- Install the package with the main dependencies: `uv pip install .`
-- To install the dev dependencies: `uv pip install --group dev`
+- Install the project: `uv sync --locked --all-extras --dev`
+  - Using `pip`, with the main dependencies: `uv pip install .`
+    - To install the dev dependencies: `uv pip install --group dev`
 
 ## Making a change
 
@@ -44,6 +46,7 @@
 - Install and run the pre-commit hooks:
 
   ```shell
+  uv tool install pre-commit@latest
   pre-commit install
   pre-commit run --all-files
   ```
