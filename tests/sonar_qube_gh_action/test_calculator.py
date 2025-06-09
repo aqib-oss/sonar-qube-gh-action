@@ -52,12 +52,8 @@ def test_divide_by_zero():
     calculator: Calculator = Calculator()
 
     # Act & Assert
-    try:
+    with pytest.raises(ValueError, match="Cannot divide by zero"):
         calculator.divide(10, 0)
-    except ValueError as e:
-        assert str(e) == "Cannot divide by zero"
-    else:
-        assert False, "Expected ValueError not raised"
 
 
 def test_divide_negative_numbers():
