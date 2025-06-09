@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v1.1.0 (2025-06-09)
+
+### Features
+
+- Dockerize ([#9](https://github.com/aqib-oss/sonar-qube-gh-action/pull/9),
+  [`e520649`](https://github.com/aqib-oss/sonar-qube-gh-action/commit/e520649fc14c92bd51a98febc5cf0809c1d940ee))
+
+
 ## v1.0.0 (2025-06-07)
 
 ### Features
