@@ -14,7 +14,7 @@ class Calculator:
         return num_1 / num_2
 
     def exponent(self, base: int, exponent: int) -> float:
-        return base**exponent
+        return float(base**exponent)
 
     def modulus(self, num_1: int, num_2: int) -> int:
         if num_2 == 0:
