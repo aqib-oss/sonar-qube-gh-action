@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v1.1.1 (2025-06-15)
+
+### Continuous Integration
+
+- Sync version in uv lock file ([#10](https://github.com/aqib-oss/sonar-qube-gh-action/pull/10),
+  [`7c7d07d`](https://github.com/aqib-oss/sonar-qube-gh-action/commit/7c7d07d05ecc2926512f69935893feddde46f1a8))
+
+
 ## v1.1.0 (2025-06-09)
 
 ### Features
