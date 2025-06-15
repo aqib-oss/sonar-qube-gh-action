@@ -23,7 +23,6 @@ env:
 
 jobs:
   main-workflow:
-    if: needs.pre-check.outputs.is_uv_lock_version_commit == 'false'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
