@@ -27,7 +27,7 @@ jobs:
   pre_check:
     runs-on: ubuntu-latest
     outputs:
-      is_uv_lock_version_sync_commit: ${{ steps.check_last_git_commit_message.outputs.is_uv_lock_version_sync_commit }}
+      is_uv_lock_version_commit: ${{ steps.check_last_git_commit_message.outputs.is_uv_lock_version_commit }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -38,14 +38,14 @@ jobs:
         id: check_last_git_commit_message
         run: |
           if git log -1 --pretty=%B | grep -Fq "${{ env.UV_LOCK_VER_COMMIT_MSG }}"; then
-            echo "is_uv_lock_version_sync_commit=true" >> $GITHUB_OUTPUT
+            echo "is_uv_lock_version_commit=true" >> $GITHUB_OUTPUT
           else
-            echo "is_uv_lock_version_sync_commit=false" >> $GITHUB_OUTPUT
+            echo "is_uv_lock_version_commit=false" >> $GITHUB_OUTPUT
           fi
 
   main-workflow:
     needs: pre_check
-    if: needs.pre_check.outputs.is_uv_lock_version_sync_commit == 'false'
+    if: needs.pre_check.outputs.is_uv_lock_version_commit == 'false'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
