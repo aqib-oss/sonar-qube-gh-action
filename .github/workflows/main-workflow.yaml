@@ -24,7 +24,7 @@ env:
   UV_LOCK_VER_COMMIT_MSG: "chore: update uv.lock with new version"
 
 jobs:
-  pre_check:
+  pre-check:
     runs-on: ubuntu-latest
     outputs:
       is_uv_lock_version_commit: ${{ steps.check_last_git_commit_message.outputs.is_uv_lock_version_commit }}
@@ -44,8 +44,8 @@ jobs:
           fi
 
   main-workflow:
-    needs: pre_check
-    if: needs.pre_check.outputs.is_uv_lock_version_commit == 'false'
+    needs: pre-check
+    if: needs.pre-check.outputs.is_uv_lock_version_commit == 'false'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
