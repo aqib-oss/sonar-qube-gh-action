@@ -21,9 +21,31 @@ env:
   TEST_IMPORT: "${{ vars.TEST_IMPORT_STATEMENT }}"
   LINK_TO_RELEASES: "https://github.com/${{ github.repository }}/releases"
   SEMVER_PAT: ${{ secrets.SEMVER_GH_TOKEN }}
+  UV_LOCK_VER_SYNC_COMMIT_MSG: "chore: update uv.lock with new version"
 
 jobs:
+  pre_check:
+    runs-on: ubuntu-latest
+    outputs:
+      is_uv_lock_version_sync_commit: ${{ steps.check_last_git_commit_message.outputs.is_uv_lock_version_sync_commit }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Check last commit message for uv.lock version sync
+        id: check_last_git_commit_message
+        run: |
+          if git log -1 --pretty=%B | grep -q "${{ env.UV_LOCK_VER_SYNC_COMMIT_MSG }}"; then
+            echo "is_uv_lock_version_sync_commit=true" >> $GITHUB_OUTPUT
+          else
+            echo "is_uv_lock_version_sync_commit=false" >> $GITHUB_OUTPUT
+          fi
+
   main-workflow:
+    needs: pre_check
+    if: needs.pre_check.outputs.is_uv_lock_version_sync_commit == 'false'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -65,6 +87,18 @@ jobs:
           github_token: ${{ secrets.SEMVER_GH_TOKEN }}
           git_committer_name: "github-actions"
           git_committer_email: "actions@users.noreply.github.com"
+
+      - name: Action | Sync version in uv.lock end-of-file-fixer
+        shell: bash
+        run: |
+          # Upgrade uv.lock with the new version.
+          uv lock --upgrade-package sonar-qube-gh-action
+          # Commit the changes.
+          git config --local user.name "github-actions"
+          git config --local user.email "github-actions@github.com"
+          git add uv.lock
+          git commit -m "${{ env.UV_LOCK_VER_SYNC_COMMIT_MSG }}" || echo "No changes to commit"
+          git push origin main || echo "No changes to push"
 
       - name: Publish | Upload to GitHub Release Assets
         uses: python-semantic-release/publish-action@v10.0.2
