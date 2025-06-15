@@ -2,6 +2,20 @@
 
 <!-- version list -->
 
+## v1.1.2 (2025-06-15)
+
+### Chores
+
+- Update uv.lock with new version
+  ([`21b0e59`](https://github.com/aqib-oss/sonar-qube-gh-action/commit/21b0e59361499afcac8231f25a56b78047a47d97))
+
+### Refactoring
+
+- Remove the pre-check step as it does not seem to be needed
+  ([#11](https://github.com/aqib-oss/sonar-qube-gh-action/pull/11),
+  [`9e643c0`](https://github.com/aqib-oss/sonar-qube-gh-action/commit/9e643c01af8cec19fb67777f36bd016cf827e7ea))
+
+
 ## v1.1.1 (2025-06-15)
 
 ### Continuous Integration
