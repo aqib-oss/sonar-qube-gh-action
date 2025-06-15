@@ -37,7 +37,7 @@ jobs:
       - name: Check last commit message for uv.lock version sync
         id: check_last_git_commit_message
         run: |
-          if git log -1 --pretty=%B | grep -q "${{ env.UV_LOCK_VER_SYNC_COMMIT_MSG }}"; then
+          if git log -1 --pretty=%B | grep -Fq "${{ env.UV_LOCK_VER_SYNC_COMMIT_MSG }}"; then
             echo "is_uv_lock_version_sync_commit=true" >> $GITHUB_OUTPUT
           else
             echo "is_uv_lock_version_sync_commit=false" >> $GITHUB_OUTPUT
@@ -88,7 +88,7 @@ jobs:
           git_committer_name: "github-actions"
           git_committer_email: "actions@users.noreply.github.com"
 
-      - name: Action | Sync version in uv.lock end-of-file-fixer
+      - name: Action | Sync version of this project in uv.lock file
         shell: bash
         run: |
           # Upgrade uv.lock with the new version.
