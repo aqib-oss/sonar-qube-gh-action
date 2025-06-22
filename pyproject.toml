@@ -27,10 +27,10 @@ commit_parser_options = { default_bump_level = 2 }
 major_on_zero = true
 version_variables = ["pyproject.toml:version"]
 build_command = """
-    python -m pip install -e .[build]
-    uv lock --offline
-    git add uv.lock
-    uv build
+python -m pip install -e .[build]
+uv lock --offline
+git add uv.lock
+uv build
 """
 
 [tool.semantic_release.changelog]
