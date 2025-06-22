@@ -26,4 +26,5 @@ Also, uses:
 ## Dev notes
 
 - [How to contribute - setup, PR, etc.](CONTRIBUTING.md)
-- Committing the uv.lock file is recommended to ensure reproducibility of the environment for binaries or applications. It should NOT be committed for libraries.
+- Committing the `uv.lock` file is recommended to ensure reproducibility of the environment for binaries or applications.
+  - It should NOT be committed for libraries.
