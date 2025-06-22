@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v1.1.6 (2025-06-22)
+
+### Continuous Integration
+
+- Remove indentation ([#15](https://github.com/aqib-oss/sonar-qube-gh-action/pull/15),
+  [`4052210`](https://github.com/aqib-oss/sonar-qube-gh-action/commit/40522109d234cd607e8d0c3912732f3c20d73456))
+
+
 ## v1.1.5 (2025-06-22)
 
 ### Documentation
