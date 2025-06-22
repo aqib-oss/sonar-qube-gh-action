@@ -29,19 +29,12 @@ commit_parser_options = { default_bump_level = 2 }
 major_on_zero = true
 version_variables = ["pyproject.toml:version"]
 build_command = """
-    curl -LsSf -o install.sh https://astral.sh/uv/install.sh
-    echo "expected-checksum-value  install.sh" | sha256sum --check --status
-    if [ $? -eq 0 ]; then
-        sh install.sh
-        source $HOME/.local/bin/env
-        git log --oneline
-        uv lock --offline
-        git add uv.lock
-        uv build
-    else
-        echo "Checksum verification failed. Aborting."
-        exit 1
-    fi
+    curl -LsSf https://astral.sh/uv/install.sh | sh
+    source $HOME/.local/bin/env
+    git log --oneline
+    uv lock --offline
+    git add uv.lock
+    uv build
 """
 
 [tool.semantic_release.changelog]
