@@ -53,9 +53,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.SEMVER_GH_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
-      - name: Build
-        run: uv build
-
       - name: Action | Semantic Version Release
         id: release
         # Adjust tag with desired version if applicable.

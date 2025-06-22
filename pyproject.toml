@@ -15,12 +15,11 @@ dev = [
     "pyright>=1.1.381",
     "ruff>=0.11.2",
     "pytest>=8.3.5",
-    "python-semantic-release>=10.1.0",
     "pre-commit>=4.2.0",
 ]
 
 [project.optional-dependencies]
-build = ["uv ~= 0.7.12"]
+build = ["uv ~= 0.7.12", "python-semantic-release ~= 10.0"]
 
 [tool.semantic_release]
 commit_parser = "conventional"
@@ -29,9 +28,6 @@ major_on_zero = true
 version_variables = ["pyproject.toml:version"]
 build_command = """
     python -m pip install -e .[build]
-    # Remove the following 2 lines if the `uv.lock` file is not committed to the repository.
-    # Committing the uv.lock file is recommended to ensure reproducibility of the environment
-    # for binaries or applications. It should NOT be committed for libraries.
     uv lock --offline
     git add uv.lock
     uv build

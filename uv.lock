@@ -690,7 +690,7 @@ wheels = [
 
 [[package]]
 name = "sonar-qube-gh-action"
-version = "1.1.3"
+version = "1.1.4"
 source = { editable = "." }
 dependencies = [
     { name = "structlog" },
@@ -698,6 +698,7 @@ dependencies = [
 
 [package.optional-dependencies]
 build = [
+    { name = "python-semantic-release" },
     { name = "uv" },
 ]
 
@@ -707,12 +708,12 @@ dev = [
     { name = "pyright" },
     { name = "pytest" },
     { name = "pytest-cov" },
-    { name = "python-semantic-release" },
     { name = "ruff" },
 ]
 
 [package.metadata]
 requires-dist = [
+    { name = "python-semantic-release", marker = "extra == 'build'", specifier = "~=10.0" },
     { name = "structlog", specifier = ">=25.2.0" },
     { name = "uv", marker = "extra == 'build'", specifier = "~=0.7.12" },
 ]
@@ -724,7 +725,6 @@ dev = [
     { name = "pyright", specifier = ">=1.1.381" },
     { name = "pytest", specifier = ">=8.3.5" },
     { name = "pytest-cov", specifier = ">=5.0.0" },
-    { name = "python-semantic-release", specifier = ">=10.1.0" },
     { name = "ruff", specifier = ">=0.11.2" },
 ]
 
