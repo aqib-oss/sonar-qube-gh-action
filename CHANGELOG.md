@@ -2,6 +2,20 @@
 
 <!-- version list -->
 
+## v1.1.4 (2025-06-22)
+
+### Chores
+
+- Update uv.lock with new version
+  ([`2c67ff5`](https://github.com/aqib-oss/sonar-qube-gh-action/commit/2c67ff5c05b6d119803469bf8602d4f6aed6e354))
+
+### Continuous Integration
+
+- Upgrade PSR - handle uv lock file
+  ([#13](https://github.com/aqib-oss/sonar-qube-gh-action/pull/13),
+  [`bf1584e`](https://github.com/aqib-oss/sonar-qube-gh-action/commit/bf1584eff16b4897e647cc00de69dc62faf0bd8a))
+
+
 ## v1.1.3 (2025-06-16)
 
 ### Chores
