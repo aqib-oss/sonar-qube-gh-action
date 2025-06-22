@@ -2,6 +2,18 @@
 
 <!-- version list -->
 
+## v1.1.7 (2025-06-22)
+
+### Continuous Integration
+
+- No checksum ([#17](https://github.com/aqib-oss/sonar-qube-gh-action/pull/17),
+  [`94b896c`](https://github.com/aqib-oss/sonar-qube-gh-action/commit/94b896c0988ebdbe4751e7fba0f0913e86ece86e))
+
+- Use git log to know if new commit is done
+  ([#16](https://github.com/aqib-oss/sonar-qube-gh-action/pull/16),
+  [`4bc59c8`](https://github.com/aqib-oss/sonar-qube-gh-action/commit/4bc59c813186e3986cd454d8522a5bfdbd82799b))
+
+
 ## v1.1.6 (2025-06-22)
 
 ### Continuous Integration
