@@ -19,7 +19,9 @@ dev = [
 ]
 
 [project.optional-dependencies]
-build = ["uv ~= 0.7.12", "python-semantic-release ~= 10.0"]
+build = [
+    "python-semantic-release ~= 10.0"
+]
 
 [tool.semantic_release]
 commit_parser = "conventional"
@@ -27,10 +29,12 @@ commit_parser_options = { default_bump_level = 2 }
 major_on_zero = true
 version_variables = ["pyproject.toml:version"]
 build_command = """
-python -m pip install -e .[build]
-uv lock --offline
-git add uv.lock
-uv build
+    curl -LsSf https://astral.sh/uv/install.sh | sh
+    source $HOME/.local/bin/env
+    git log --oneline
+    uv lock --offline
+    git add uv.lock
+    uv build
 """
 
 [tool.semantic_release.changelog]
