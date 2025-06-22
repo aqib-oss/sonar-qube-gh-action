@@ -15,16 +15,27 @@ dev = [
     "pyright>=1.1.381",
     "ruff>=0.11.2",
     "pytest>=8.3.5",
-    "python-semantic-release>=10.0.2",
+    "python-semantic-release>=10.1.0",
     "pre-commit>=4.2.0",
 ]
+
+[project.optional-dependencies]
+build = ["uv ~= 0.7.12"]
 
 [tool.semantic_release]
 commit_parser = "conventional"
 commit_parser_options = { default_bump_level = 2 }
 major_on_zero = true
 version_variables = ["pyproject.toml:version"]
-build_command = "curl -LsSf https://astral.sh/uv/install.sh | sh && source $HOME/.local/bin/env && uv build"
+build_command = """
+    python -m pip install -e .[build]
+    # Remove the following 2 lines if the `uv.lock` file is not committed to the repository.
+    # Committing the uv.lock file is recommended to ensure reproducibility of the environment
+    # for binaries or applications. It should NOT be committed for libraries.
+    uv lock --offline
+    git add uv.lock
+    uv build
+"""
 
 [tool.semantic_release.changelog]
 default_templates = { changelog_file = "CHANGELOG.md" }

@@ -34,7 +34,7 @@ jobs:
         uses: astral-sh/setup-uv@v5
         with:
           # Install a specific version of uv.
-          version: "0.7.12"
+          version: "0.7.13"
 
       - name: "Set up Python"
         uses: actions/setup-python@v5
@@ -59,27 +59,14 @@ jobs:
       - name: Action | Semantic Version Release
         id: release
         # Adjust tag with desired version if applicable.
-        uses: python-semantic-release/python-semantic-release@v10.0.2
+        uses: python-semantic-release/python-semantic-release@v10.1.0
         with:
           github_token: ${{ secrets.SEMVER_GH_TOKEN }}
           git_committer_name: "github-actions"
           git_committer_email: "actions@users.noreply.github.com"
 
-      # Remove this step if the `uv.lock` file is not committed to the repository.
-      # Committing the uv.lock file is recommended to ensure reproducibility of the environment
-      # for binaries or applications. It should NOT be committed for libraries.
-      - name: Action | Sync version of this project in uv.lock file
-        shell: bash
-        run: |
-          uv lock --upgrade-package sonar-qube-gh-action
-          git config --local user.name "github-actions"
-          git config --local user.email "actions@users.noreply.github.com"
-          git add uv.lock
-          git commit -m "chore: update uv.lock with new version" || echo "No changes to commit"
-          git push origin ${{ github.ref_name }} || echo "No changes to push"
-
       - name: Publish | Upload to GitHub Release Assets
-        uses: python-semantic-release/publish-action@v10.0.2
+        uses: python-semantic-release/publish-action@v10.1.0
         if: steps.release.outputs.released == 'true'
         with:
           github_token: ${{ secrets.SEMVER_GH_TOKEN }}
