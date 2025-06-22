@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v1.1.5 (2025-06-22)
+
+### Documentation
+
+- Move comments ([#14](https://github.com/aqib-oss/sonar-qube-gh-action/pull/14),
+  [`f2d7b95`](https://github.com/aqib-oss/sonar-qube-gh-action/commit/f2d7b954bc5963c1597eef92ecec5154debb0f5c))
+
+
 ## v1.1.4 (2025-06-22)
 
 ### Chores
