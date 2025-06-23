@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v1.1.8 (2025-06-23)
+
+### Continuous Integration
+
+- Add back uv lock sync ([#18](https://github.com/aqib-oss/sonar-qube-gh-action/pull/18),
+  [`2ce3d60`](https://github.com/aqib-oss/sonar-qube-gh-action/commit/2ce3d60f6ca10ec5e67ba54902b2853f1cf1fc52))
+
+
 ## v1.1.7 (2025-06-22)
 
 ### Continuous Integration
