@@ -20,7 +20,8 @@ dev = [
 
 [project.optional-dependencies]
 build = [
-    "uv ~= 0.7.13", # To enable the python-semantic-release GH Action to run the uv build command.
+    # Ensures python-semantic-release GH Action can invoke 'uv build' in its container.
+    "uv ~= 0.7.13",
     "python-semantic-release ~= 10.0"
 ]
 
