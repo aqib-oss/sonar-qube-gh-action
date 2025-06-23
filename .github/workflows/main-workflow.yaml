@@ -65,7 +65,7 @@ jobs:
       - name: Action | Sync the version of this project in uv.lock file
         shell: bash
         run: |
-          uv lock --offline
+          uv lock --upgrade-package sonar-qube-gh-action
           git config --local user.name "github-actions"
           git config --local user.email "actions@users.noreply.github.com"
           git add uv.lock
