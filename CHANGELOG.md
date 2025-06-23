@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v1.1.9 (2025-06-23)
+
+### Continuous Integration
+
+- Fix lock sync step ([#19](https://github.com/aqib-oss/sonar-qube-gh-action/pull/19),
+  [`4f6cd62`](https://github.com/aqib-oss/sonar-qube-gh-action/commit/4f6cd62fda706d9b9a364274c6748a57c09550aa))
+
+
 ## v1.1.8 (2025-06-23)
 
 ### Continuous Integration
