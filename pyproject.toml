@@ -35,19 +35,9 @@ build_command = """
     python -m venv $HOME/.venv
     source $HOME/.venv/bin/activate
     pip install --upgrade pip
-    python -m pip install .
-    python -m pip install '.[build]'
-    echo "--------- Check git status"
-    git status
-    echo "--------- Check uv version"
-    uv --version
-    echo "--------- Update lock file"
+    python -m pip install -e '.[build]'
     uv lock --upgrade-package sonar-qube-gh-action
-    echo "------------ Check git status again"
-    git status
-    echo "---------- Git add uv lock file"
     git add uv.lock
-    echo "---------- Now uv build"
     uv build
 """
 
