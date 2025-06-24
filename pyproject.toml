@@ -21,7 +21,7 @@ dev = [
 [project.optional-dependencies]
 build = [
     # Ensures python-semantic-release GH Action can invoke 'uv build' in its container.
-    "uv ~= 0.7.13",
+    "uv ~= 0.7.14",
     "python-semantic-release ~= 10.0"
 ]
 
@@ -35,17 +35,21 @@ build_command = """
     python -m venv $HOME/.venv
     source $HOME/.venv/bin/activate
     python -m pip install -e .[build]
-    echo "Check git log"
-    git log --oneline
-    echo "Check git status"
+    echo "--------- Check git status"
     git status
-    echo "Update lock file"
+    echo "--------- Check uv version"
+    uv --version
+    echo "--------- Create uv env"
+    uv venv sonar_qube_gh_action
+    echo "--------- Activate uv env"
+    source sonar_qube_gh_action/bin/activate
+    echo "--------- Update lock file"
     uv lock --offline
-    echo "Check git diff"
+    echo "------------ Check git diff"
     git diff
-    echo "Git add uv lock file"
+    echo "---------- Git add uv lock file"
     git add uv.lock
-    echo "Now uv build"
+    echo "---------- Now uv build"
     uv build
 """
 
