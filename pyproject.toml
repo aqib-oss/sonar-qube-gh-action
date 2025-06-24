@@ -35,6 +35,7 @@ build_command = """
     python -m venv $HOME/.venv
     source $HOME/.venv/bin/activate
     python -m pip install .
+    python -m pip install .[build]
     echo "--------- Check git status"
     git status
     echo "--------- Check uv version"
