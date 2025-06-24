@@ -37,10 +37,12 @@ build_command = """
     python -m pip install -e .[build]
     echo "--------- Check git status"
     git status
+    echo "--------- Check uv version"
     uv --version
+    echo "--------- Create uv env"
     uv venv sonar_qube_gh_action
+    echo "--------- Activate uv env"
     source sonar_qube_gh_action/bin/activate
-    uv sync --locked
     echo "--------- Update lock file"
     uv lock --offline
     echo "------------ Check git diff"
