@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v1.1.11 (2025-06-24)
+
+### Continuous Integration
+
+- Create venv in home folder ([#21](https://github.com/aqib-oss/sonar-qube-gh-action/pull/21),
+  [`17c67e9`](https://github.com/aqib-oss/sonar-qube-gh-action/commit/17c67e9f633a5e821ecf1291e8c864712ac9ab82))
+
+
 ## v1.1.10 (2025-06-24)
 
 ### Chores
