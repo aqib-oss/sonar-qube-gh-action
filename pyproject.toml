@@ -42,9 +42,9 @@ build_command = """
     echo "--------- Check uv version"
     uv --version
     echo "--------- Update lock file"
-    uv lock --offline
-    echo "------------ Check git diff"
-    git diff
+    uv lock --upgrade-package sonar-qube-gh-action
+    echo "------------ Check git status again"
+    git status
     echo "---------- Git add uv lock file"
     git add uv.lock
     echo "---------- Now uv build"
