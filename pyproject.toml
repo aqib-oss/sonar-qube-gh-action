@@ -28,11 +28,16 @@ build = [
 [tool.semantic_release]
 commit_parser = "conventional"
 commit_parser_options = { default_bump_level = 2 }
+allow_zero_version = true
 major_on_zero = true
 version_variables = ["pyproject.toml:version"]
 build_command = """
+    python -m venv .venv
+    source .venv/bin/activate
     python -m pip install -e .[build]
-    source $HOME/.local/bin/env
+    git log --oneline
+    uv lock --offline
+    git diff
     uv build
 """
 
