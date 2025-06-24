@@ -2,6 +2,19 @@
 
 <!-- version list -->
 
+## v1.1.13 (2025-06-24)
+
+### Chores
+
+- Update uv.lock with new version
+  ([`45b717f`](https://github.com/aqib-oss/sonar-qube-gh-action/commit/45b717f38756af069380426cf1350e2a9d1da90f))
+
+### Continuous Integration
+
+- Try uv upgrade project ([#25](https://github.com/aqib-oss/sonar-qube-gh-action/pull/25),
+  [`7efebef`](https://github.com/aqib-oss/sonar-qube-gh-action/commit/7efebefb2dd282d9ad33a02bcb984d82c43b999e))
+
+
 ## v1.1.12 (2025-06-24)
 
 ### Chores
