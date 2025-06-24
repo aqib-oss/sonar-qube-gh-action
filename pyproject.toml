@@ -32,12 +32,20 @@ allow_zero_version = true
 major_on_zero = true
 version_variables = ["pyproject.toml:version"]
 build_command = """
-    python -m venv .venv
-    source .venv/bin/activate
+    python -m venv $HOME/.venv
+    source $HOME/.venv/bin/activate
     python -m pip install -e .[build]
+    echo "Check git log"
     git log --oneline
+    echo "Check git status"
+    git status
+    echo "Update lock file"
     uv lock --offline
+    echo "Check git diff"
     git diff
+    echo "Git add uv lock file"
+    git add uv.lock
+    echo "Now uv build"
     uv build
 """
 
