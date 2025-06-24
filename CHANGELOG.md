@@ -2,6 +2,25 @@
 
 <!-- version list -->
 
+## v1.1.12 (2025-06-24)
+
+### Chores
+
+- Update uv.lock with new version
+  ([`32b6f72`](https://github.com/aqib-oss/sonar-qube-gh-action/commit/32b6f722efadcc2821ab166658e0dbd47d4eca54))
+
+### Continuous Integration
+
+- Install build deps ([#24](https://github.com/aqib-oss/sonar-qube-gh-action/pull/24),
+  [`d2c15c5`](https://github.com/aqib-oss/sonar-qube-gh-action/commit/d2c15c5b64542cae83b9a3864a87c652f510d458))
+
+- No uv env needed ([#23](https://github.com/aqib-oss/sonar-qube-gh-action/pull/23),
+  [`cd6ad8c`](https://github.com/aqib-oss/sonar-qube-gh-action/commit/cd6ad8c76b1bb321dca8aba1a959cd22ef064fc2))
+
+- Update uv version ([#22](https://github.com/aqib-oss/sonar-qube-gh-action/pull/22),
+  [`cfe5071`](https://github.com/aqib-oss/sonar-qube-gh-action/commit/cfe507194d8fac061319ef8639b4a752529deb74))
+
+
 ## v1.1.11 (2025-06-24)
 
 ### Continuous Integration
