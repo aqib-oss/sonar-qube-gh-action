@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v1.1.14 (2025-06-24)
+
+### Continuous Integration
+
+- Clean up ([#26](https://github.com/aqib-oss/sonar-qube-gh-action/pull/26),
+  [`772b230`](https://github.com/aqib-oss/sonar-qube-gh-action/commit/772b2308475a6087600315f3079d1c4eb40463dd))
+
+
 ## v1.1.13 (2025-06-24)
 
 ### Chores
