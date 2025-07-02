@@ -22,7 +22,7 @@ dev = [
 build = [
     # Ensures python-semantic-release GH Action can invoke 'uv build' in its container.
     "uv ~= 0.7.14",
-    "python-semantic-release ~= 10.0"
+    "python-semantic-release ~= 10.2.0"
 ]
 
 [tool.semantic_release]
@@ -36,7 +36,7 @@ build_command = """
     source $HOME/.venv/bin/activate
     pip install --upgrade pip
     python -m pip install -e '.[build]'
-    uv lock --upgrade-package sonar-qube-gh-action
+    uv lock --upgrade-package "$PACKAGE_NAME"
     git add uv.lock
     uv build
 """
