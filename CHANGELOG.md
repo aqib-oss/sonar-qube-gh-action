@@ -2,6 +2,15 @@
 
 <!-- version list -->
 
+## v1.1.15 (2025-07-02)
+
+### Continuous Integration
+
+- Upgrade PSR for UV integration update
+  ([#27](https://github.com/aqib-oss/sonar-qube-gh-action/pull/27),
+  [`ac1500c`](https://github.com/aqib-oss/sonar-qube-gh-action/commit/ac1500cec39bc4e0855343dc6358fb3894d82401))
+
+
 ## v1.1.14 (2025-06-24)
 
 ### Continuous Integration
