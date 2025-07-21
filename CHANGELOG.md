@@ -2,6 +2,15 @@
 
 <!-- version list -->
 
+## v1.1.16 (2025-07-21)
+
+### Chores
+
+- **deps**: Update uv requirement from ~=0.7.14 to ~=0.8.0
+  ([#28](https://github.com/aqib-oss/sonar-qube-gh-action/pull/28),
+  [`ea7389e`](https://github.com/aqib-oss/sonar-qube-gh-action/commit/ea7389e6a4801489822ad6a62d4a74dd9d4a366f))
+
+
 ## v1.1.15 (2025-07-02)
 
 ### Continuous Integration
