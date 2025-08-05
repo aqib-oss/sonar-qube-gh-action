@@ -2,6 +2,19 @@
 
 <!-- version list -->
 
+## v1.1.17 (2025-08-05)
+
+### Chores
+
+- **deps**: Update python-semantic-release requirement
+  ([#29](https://github.com/aqib-oss/sonar-qube-gh-action/pull/29),
+  [`4501e7a`](https://github.com/aqib-oss/sonar-qube-gh-action/commit/4501e7ac6e6f9d363937e39a8ce03b95fa068eeb))
+
+- **deps**: Update python-semantic-release requirement from ~=10.2.0 to ~=10.3.0
+  ([#29](https://github.com/aqib-oss/sonar-qube-gh-action/pull/29),
+  [`4501e7a`](https://github.com/aqib-oss/sonar-qube-gh-action/commit/4501e7ac6e6f9d363937e39a8ce03b95fa068eeb))
+
+
 ## v1.1.16 (2025-07-21)
 
 ### Chores
