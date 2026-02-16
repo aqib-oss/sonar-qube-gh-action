@@ -2,6 +2,15 @@
 
 <!-- version list -->
 
+## v1.2.1 (2026-02-16)
+
+### Chores
+
+- **deps**: Update python-semantic-release to v10.5.3
+  ([#50](https://github.com/aqib-oss/sonar-qube-gh-action/pull/50),
+  [`b7da9b1`](https://github.com/aqib-oss/sonar-qube-gh-action/commit/b7da9b180246538ed35d7f6b588c8069a470c45f))
+
+
 ## v1.2.0 (2026-02-16)
 
 ### Chores
