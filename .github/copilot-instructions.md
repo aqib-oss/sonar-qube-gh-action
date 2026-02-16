@@ -6,6 +6,12 @@ This repository demonstrates SonarQube GitHub Action integration with a Python p
 
 ### Setup
 - Install uv: `curl -LsSf https://astral.sh/uv/install.sh | sh`
+- **Keep uv version latest and synchronized**: Always use the latest stable uv version across all environments
+  - **Local development**: Update to latest: `uv self update`
+  - **GitHub Actions workflows**: Update version in `.github/workflows/*.yaml` files
+  - **pyproject.toml**: Update uv dependency in `[project.optional-dependencies].build`
+  - Check current version: `uv --version`
+  - Verify all three locations use the same version for consistency
 - Create virtual environment: `uv venv sonar_qube_gh_action && source sonar_qube_gh_action/bin/activate`
 - Install dependencies: `uv sync --locked --all-extras --dev`
 
@@ -66,6 +72,13 @@ def test_example():
 
 ## Key Conventions
 
+### Git Workflow
+- **Always create a new branch** for any changes - never work directly on main
+- Branch naming: `feat/`, `fix/`, `chore/`, `docs/` prefixes
+- Example: `git checkout -b feat/add-new-feature` or `git checkout -b chore/update-dependencies`
+- Verify current branch: `git branch --show-current`
+- Push with upstream: `git push --set-upstream origin <branch-name>`
+
 ### Commit Messages
 Follow [Conventional Commits](https://www.conventionalcommits.org/) for semantic versioning:
 - `fix:` - Patch version bump
@@ -104,3 +117,6 @@ BREAKING CHANGE: The amazing option will now be replaced with the boring option.
 ### Lockfile Management
 - `uv.lock` is committed (recommended for applications, not libraries)
 - Always sync with `--locked` flag in CI to ensure reproducibility
+- **Version consistency**: uv lockfile revision may change when using different uv versions
+  - This is normal behavior and backwards compatible
+  - Keep uv version consistent across local, pyproject.toml, and workflows to minimize revision changes
