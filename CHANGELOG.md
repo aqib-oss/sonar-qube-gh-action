@@ -2,6 +2,20 @@
 
 <!-- version list -->
 
+## v1.2.0 (2026-02-16)
+
+### Chores
+
+- Add pyright configuration file ([#49](https://github.com/aqib-oss/sonar-qube-gh-action/pull/49),
+  [`4cb4cdd`](https://github.com/aqib-oss/sonar-qube-gh-action/commit/4cb4cddc85eb084796b5bf5bebda4977c32a22fd))
+
+### Features
+
+- Add GitHub Copilot instructions for repository
+  ([#49](https://github.com/aqib-oss/sonar-qube-gh-action/pull/49),
+  [`4cb4cdd`](https://github.com/aqib-oss/sonar-qube-gh-action/commit/4cb4cddc85eb084796b5bf5bebda4977c32a22fd))
+
+
 ## v1.1.17 (2025-08-05)
 
 ### Chores
