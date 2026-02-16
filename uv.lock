@@ -690,7 +690,7 @@ wheels = [
 
 [[package]]
 name = "sonar-qube-gh-action"
-version = "1.2.6"
+version = "1.2.7"
 source = { editable = "." }
 dependencies = [
     { name = "structlog" },

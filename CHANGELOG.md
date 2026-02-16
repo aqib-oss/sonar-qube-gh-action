@@ -2,6 +2,29 @@
 
 <!-- version list -->
 
+## v1.2.7 (2026-02-16)
+
+### Chores
+
+- **deps**: Update virtualenv to v20.36.1
+  ([#55](https://github.com/aqib-oss/sonar-qube-gh-action/pull/55),
+  [`712abad`](https://github.com/aqib-oss/sonar-qube-gh-action/commit/712abad969800556478b89ee785074f29c807dc5))
+
+### Documentation
+
+- Clarify uv syncing and workflow practices
+  ([#55](https://github.com/aqib-oss/sonar-qube-gh-action/pull/55),
+  [`712abad`](https://github.com/aqib-oss/sonar-qube-gh-action/commit/712abad969800556478b89ee785074f29c807dc5))
+
+- Clarify uv version synchronization across all environments
+  ([#55](https://github.com/aqib-oss/sonar-qube-gh-action/pull/55),
+  [`712abad`](https://github.com/aqib-oss/sonar-qube-gh-action/commit/712abad969800556478b89ee785074f29c807dc5))
+
+- Update copilot instructions for better workflow practices
+  ([#55](https://github.com/aqib-oss/sonar-qube-gh-action/pull/55),
+  [`712abad`](https://github.com/aqib-oss/sonar-qube-gh-action/commit/712abad969800556478b89ee785074f29c807dc5))
+
+
 ## v1.2.6 (2026-02-16)
 
 ### Chores
