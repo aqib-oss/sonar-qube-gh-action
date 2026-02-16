@@ -2,6 +2,19 @@
 
 <!-- version list -->
 
+## v1.2.4 (2026-02-16)
+
+### Chores
+
+- Update SonarQube scan action to v7.0.0
+  ([#52](https://github.com/aqib-oss/sonar-qube-gh-action/pull/52),
+  [`44b6d52`](https://github.com/aqib-oss/sonar-qube-gh-action/commit/44b6d52f0ce7caf6a3b5655ed2b09008dcb58e74))
+
+- **deps**: Update urllib3 to v2.6.3
+  ([#52](https://github.com/aqib-oss/sonar-qube-gh-action/pull/52),
+  [`44b6d52`](https://github.com/aqib-oss/sonar-qube-gh-action/commit/44b6d52f0ce7caf6a3b5655ed2b09008dcb58e74))
+
+
 ## v1.2.3 (2026-02-16)
 
 ### Chores
