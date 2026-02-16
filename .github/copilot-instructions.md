@@ -6,10 +6,12 @@ This repository demonstrates SonarQube GitHub Action integration with a Python p
 
 ### Setup
 - Install uv: `curl -LsSf https://astral.sh/uv/install.sh | sh`
-- **Keep uv version in sync**: Ensure your local uv version matches the version in GitHub Actions workflows (currently v0.10.2)
+- **Keep uv version latest and synchronized**: Always use the latest stable uv version across all environments
+  - **Local development**: Update to latest: `uv self update`
+  - **GitHub Actions workflows**: Update version in `.github/workflows/*.yaml` files
+  - **pyproject.toml**: Update uv dependency in `[project.optional-dependencies].build`
   - Check current version: `uv --version`
-  - Update to match workflows: `uv self update` (then specify version if needed)
-  - Workflows use version: `0.10.2` (see `.github/workflows/main-workflow.yaml`)
+  - Verify all three locations use the same version for consistency
 - Create virtual environment: `uv venv sonar_qube_gh_action && source sonar_qube_gh_action/bin/activate`
 - Install dependencies: `uv sync --locked --all-extras --dev`
 
@@ -117,4 +119,4 @@ BREAKING CHANGE: The amazing option will now be replaced with the boring option.
 - Always sync with `--locked` flag in CI to ensure reproducibility
 - **Version consistency**: uv lockfile revision may change when using different uv versions
   - This is normal behavior and backwards compatible
-  - Keep local uv version aligned with CI/CD workflows to minimize revision changes
+  - Keep uv version consistent across local, pyproject.toml, and workflows to minimize revision changes
