@@ -2,6 +2,15 @@
 
 <!-- version list -->
 
+## v1.2.6 (2026-02-16)
+
+### Chores
+
+- **deps**: Update virtualenv to v20.36.1
+  ([#54](https://github.com/aqib-oss/sonar-qube-gh-action/pull/54),
+  [`c0e3643`](https://github.com/aqib-oss/sonar-qube-gh-action/commit/c0e36435e2a59857eba35965cbf665c1d7ee4610))
+
+
 ## v1.2.5 (2026-02-16)
 
 ### Chores
