@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v1.2.2 (2026-02-16)
+
+### Chores
+
+- **deps**: Update uv to v0.10.2
+  ([`7ee87fb`](https://github.com/aqib-oss/sonar-qube-gh-action/commit/7ee87fb7fb8b6b992fa3a125384568ca57c50521))
+
+
 ## v1.2.1 (2026-02-16)
 
 ### Chores
