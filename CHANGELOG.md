@@ -2,6 +2,15 @@
 
 <!-- version list -->
 
+## v1.2.3 (2026-02-16)
+
+### Chores
+
+- **deps**: Update urllib3 to v2.6.3
+  ([#51](https://github.com/aqib-oss/sonar-qube-gh-action/pull/51),
+  [`0b86368`](https://github.com/aqib-oss/sonar-qube-gh-action/commit/0b86368bece5a9133a131770eccc1c85a14ab373))
+
+
 ## v1.2.2 (2026-02-16)
 
 ### Chores
