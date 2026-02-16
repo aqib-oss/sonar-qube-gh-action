@@ -2,6 +2,15 @@
 
 <!-- version list -->
 
+## v1.2.5 (2026-02-16)
+
+### Chores
+
+- **deps**: Update filelock to v3.24.2
+  ([#53](https://github.com/aqib-oss/sonar-qube-gh-action/pull/53),
+  [`3500757`](https://github.com/aqib-oss/sonar-qube-gh-action/commit/35007579e2322416a2da06c6dbba8e8e9a163fdb))
+
+
 ## v1.2.4 (2026-02-16)
 
 ### Chores
