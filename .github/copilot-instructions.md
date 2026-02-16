@@ -7,7 +7,7 @@ This repository demonstrates SonarQube GitHub Action integration with a Python p
 ### Setup
 - Install uv: `curl -LsSf https://astral.sh/uv/install.sh | sh`
 - Create virtual environment: `uv venv sonar_qube_gh_action && source sonar_qube_gh_action/bin/activate`
-- Install dependencies: `uv sync --locked --all-extras`
+- Install dependencies: `uv sync --locked --all-extras --dev`
 
 ### Testing
 - Run all tests: `uv run pytest`
