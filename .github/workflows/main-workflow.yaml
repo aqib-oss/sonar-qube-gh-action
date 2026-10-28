@@ -68,3 +68,25 @@ jobs:
         with:
           github_token: ${{ secrets.SEMVER_GH_TOKEN }}
           tag: ${{ steps.release.outputs.tag }}
+
+      - name: Recover | Create missing GitHub Release
+        # If a previous run pushed the version commit and tag but failed to create
+        # the GitHub Release (e.g. expired token), a re-run makes no new release.
+        # Create the release for that tag, with its notes and assets.
+        if: steps.release.outputs.released == 'false' && steps.release.outputs.tag != ''
+        env:
+          GH_TOKEN: ${{ secrets.SEMVER_GH_TOKEN }}
+          SEMVER_GH_TOKEN: ${{ secrets.SEMVER_GH_TOKEN }}
+          TAG: ${{ steps.release.outputs.tag }}
+        run: |
+          if gh release view "$TAG" > /dev/null 2>&1; then
+            echo "GitHub Release for $TAG already exists."
+            exit 0
+          fi
+          echo "GitHub Release for $TAG is missing; creating it."
+          # semantic-release needs a branch matching its config, not a detached HEAD.
+          git checkout --force -B main "$TAG"
+          rm -rf dist
+          uv build
+          uv run --no-sync semantic-release changelog --post-to-release-tag "$TAG"
+          uv run --no-sync semantic-release publish --tag "$TAG"
