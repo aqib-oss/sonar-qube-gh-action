@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v1.2.12 (2026-10-28)
+
+### Chores
+
+- Update pre-commit hooks ([#67](https://github.com/aqib-oss/sonar-qube-gh-action/pull/67),
+  [`c1788e4`](https://github.com/aqib-oss/sonar-qube-gh-action/commit/c1788e48c704a9328639659149e4d9819c6728d5))
+
+
 ## v1.2.11 (2026-10-28)
 
 ### Documentation
