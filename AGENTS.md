@@ -77,9 +77,11 @@ environment issue, not a code issue.
 - Keep the uv version consistent everywhere it is pinned:
   - `pyproject.toml` -> `[project.optional-dependencies].build` (`uv ~= X.Y.Z`)
   - `.github/workflows/*.yaml` -> `astral-sh/setup-uv` `version:` input
+  - `.pre-commit-config.yaml` -> `astral-sh/uv-pre-commit` `rev:`
   - local uv (`uv self update`)
 - Keep the `python-semantic-release` version in `pyproject.toml` in sync with the
   `python-semantic-release/python-semantic-release` and `publish-action` tags in `main-workflow.yaml`.
+- Keep the `astral-sh/ruff-pre-commit` `rev:` in `.pre-commit-config.yaml` in line with the ruff version in `uv.lock`.
 - Dependabot (`.github/dependabot.yml`) opens weekly pip update PRs and security alerts against `uv.lock`.
   Pins in the `build` extra can block security fixes for transitive packages; check them when an alert's patched
   version can't be resolved.
