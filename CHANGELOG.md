@@ -2,6 +2,15 @@
 
 <!-- version list -->
 
+## v1.2.8 (2026-10-28)
+
+### Bug Fixes
+
+- **deps**: Upgrade dependencies to resolve Dependabot security alerts
+  ([#63](https://github.com/aqib-oss/sonar-qube-gh-action/pull/63),
+  [`eb19267`](https://github.com/aqib-oss/sonar-qube-gh-action/commit/eb1926767173de649965affaa806803f71b414f2))
+
+
 ## v1.2.7 (2026-02-16)
 
 ### Chores
