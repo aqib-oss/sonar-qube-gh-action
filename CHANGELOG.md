@@ -2,6 +2,15 @@
 
 <!-- version list -->
 
+## v1.2.10 (2026-10-28)
+
+### Continuous Integration
+
+- Create missing GitHub Release when re-running main workflow
+  ([#65](https://github.com/aqib-oss/sonar-qube-gh-action/pull/65),
+  [`ef27323`](https://github.com/aqib-oss/sonar-qube-gh-action/commit/ef27323149f2c683db50a9965208fb3a4a340d83))
+
+
 ## v1.2.9 (2026-10-28)
 
 ### Continuous Integration
