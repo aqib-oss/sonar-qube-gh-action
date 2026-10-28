@@ -2,6 +2,15 @@
 
 <!-- version list -->
 
+## v1.2.11 (2026-10-28)
+
+### Documentation
+
+- Replace Copilot instructions with AGENTS.md
+  ([#66](https://github.com/aqib-oss/sonar-qube-gh-action/pull/66),
+  [`7dd07e1`](https://github.com/aqib-oss/sonar-qube-gh-action/commit/7dd07e1d1271495d9d0e7f1fddb2d4af941653ad))
+
+
 ## v1.2.10 (2026-10-28)
 
 ### Continuous Integration
