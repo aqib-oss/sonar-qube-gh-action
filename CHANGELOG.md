@@ -2,6 +2,19 @@
 
 <!-- version list -->
 
+## v1.2.9 (2026-10-28)
+
+### Continuous Integration
+
+- Pin astral-sh/setup-uv to v10.3.2
+  ([#64](https://github.com/aqib-oss/sonar-qube-gh-action/pull/64),
+  [`9adb44e`](https://github.com/aqib-oss/sonar-qube-gh-action/commit/9adb44ed16247db4dd564a2fe8fc9e7e6928b39b))
+
+- Upgrade GitHub Actions to Node.js 24 runtimes
+  ([#64](https://github.com/aqib-oss/sonar-qube-gh-action/pull/64),
+  [`9adb44e`](https://github.com/aqib-oss/sonar-qube-gh-action/commit/9adb44ed16247db4dd564a2fe8fc9e7e6928b39b))
+
+
 ## v1.2.8 (2026-10-28)
 
 ### Bug Fixes
